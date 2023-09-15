@@ -36,4 +36,5 @@ jobs:
           echo test, and deploy your project.
           echo $PR_HEAD_REPO_FULL_NAME
           echo $PR_HEAD_BASE_FULL_NAME
+          echo test
           ./run.sh
