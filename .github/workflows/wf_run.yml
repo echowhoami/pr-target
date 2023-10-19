@@ -1,0 +1,15 @@
+name: WF Run
+
+on:
+  workflow_run:
+    workflows: [CI]
+    types:
+      - completed
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: 'Unzip artifact'
+        run: echo "unzipppppppppiiiiinnngggggg...."

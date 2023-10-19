@@ -1,0 +1,19 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Issue Comment
+
+on:
+  issue_comment:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo repo
+        env:
+          PR_HEAD_REPO_FULL_NAME: ${{ github.event.pull_request.head.repo.full_name }}
+          PR_HEAD_BASE_FULL_NAME: ${{ github.event.pull_request.base.repo.full_name }}
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
+          echo $PR_HEAD_REPO_FULL_NAME
+          echo $PR_HEAD_BASE_FULL_NAME
